@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Meteors from "~/components/ui/meteors";
 
 export default function HomePage() {
