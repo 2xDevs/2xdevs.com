@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 
+import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/provider/ThemeProvider";
 
@@ -34,6 +35,7 @@ export default function RootLayout({
               {children}
             </div>
           </div>
+          <Toaster richColors />
         </ThemeProvider>
       </body>
     </html>

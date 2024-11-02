@@ -1,5 +1,6 @@
 import { ContactForm } from "@/components/ContactForm";
-import { Icons } from "@/components/Icons";
+import { Logo } from "@/components/logo";
+import BlurFade from "@/components/ui/blur-fade";
 import { Button } from "@/components/ui/button";
 import GridPattern from "@/components/ui/grid-pattern";
 import { cn } from "@/lib/utils";
@@ -18,35 +19,44 @@ export default function HomePage() {
       <section id="Hero" className="border-b py-12">
         <div className="mx-auto max-w-screen-lg space-y-20 px-4">
           <div className="text-center">
-            <Link href={"/"} className="flex items-center justify-center">
-              <Icons.logo className="mr-2 size-10 md:size-20 lg:size-32" />
-            </Link>
+            <BlurFade delay={0.25} inView>
+              <Link href={"/"} className="flex items-center justify-center">
+                <Logo className="mr-2 size-16 md:size-24 lg:size-32" />
+              </Link>
+            </BlurFade>
             <div className="mx-auto flex flex-col gap-10">
-              <h1 className="text-4xl font-bold md:text-7xl">
-                Web Apps that Make Sense.
-              </h1>
-              <p className="font-regular mx-auto max-w-3xl text-base tracking-wide text-muted-foreground">
-                We build website for your business that actually converts.
-                Wonderfully designed, masterfully created websites and layouts,
-                created by the founders of Google and Facebook. The ideal
-                beginning stage for your next project.
-              </p>
+              <BlurFade delay={0.3} inView>
+                <h1 className="text-4xl font-bold md:text-7xl">
+                  Web Apps that Make Sense.
+                </h1>
+              </BlurFade>
+              <BlurFade delay={0.35} inView>
+                <p className="font-regular mx-auto max-w-3xl text-base tracking-wide text-muted-foreground">
+                  We build websites for your business that actually convert.
+                  Wonderfully designed, masterfully created websites and
+                  layouts, created by the founders of Google and Facebook. The
+                  ideal beginning stage for your next project.
+                </p>
+              </BlurFade>
             </div>
           </div>
           <div className="relative mx-auto mb-20 grid w-full grid-cols-1 gap-10 px-2 md:grid-cols-2 md:px-8 lg:grid-cols-3">
             {FEATURES_DATA.map((data, index) => (
-              <Features
-                key={index}
-                Icon={data.Icon}
-                title={data.title}
-                description={data.description}
-              />
+              <BlurFade key={index} delay={0.4 + index * 0.05} inView>
+                <Features
+                  Icon={data.Icon}
+                  title={data.title}
+                  description={data.description}
+                />
+              </BlurFade>
             ))}
           </div>
           <div className="text-center">
-            <Button className="text-base font-medium" size="lg">
-              <Link href={"#work"}>Explore Work</Link>
-            </Button>
+            <BlurFade delay={0.45} inView>
+              <Button className="text-base font-medium" size="lg">
+                <Link href={"#work"}>Explore Work</Link>
+              </Button>
+            </BlurFade>
           </div>
         </div>
       </section>
@@ -54,21 +64,26 @@ export default function HomePage() {
       <section id="work" className="border-b py-12">
         <div className="mx-auto max-w-6xl space-y-12 px-8">
           <div className="space-y-2 text-center">
-            <h2 className="text-4xl font-bold text-primary">Recent Work</h2>
-            <p>
-              A look at some of the amazing websites that we&apos;ve built
-              recently.
-            </p>
+            <BlurFade delay={0.5} inView>
+              <h2 className="text-4xl font-bold text-primary">Recent Work</h2>
+            </BlurFade>
+            <BlurFade delay={0.5} inView>
+              <p>
+                A look at some of the amazing websites that we&apos;ve built
+                recently.
+              </p>
+            </BlurFade>
           </div>
           <div>
             {WORK_DATA.map((data, index) => (
-              <Work
-                key={index}
-                title={data.title}
-                description={data.description}
-                link={data.link}
-                imageSrc={data.imageSrc}
-              />
+              <BlurFade key={index} delay={0.25 + index * 0.05} inView>
+                <Work
+                  title={data.title}
+                  description={data.description}
+                  link={data.link}
+                  imageSrc={data.imageSrc}
+                />
+              </BlurFade>
             ))}
           </div>
         </div>
@@ -77,49 +92,56 @@ export default function HomePage() {
       <section id="services" className="py-12">
         <div className="mx-auto max-w-6xl space-y-12 px-8">
           <div className="mx-auto max-w-2xl space-y-2 text-center">
-            <h2 className="text-4xl font-semibold">
-              We handle just about everything!
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              We handle everything from design to deployment to get your website
-              shipped and ready to go!
-            </p>
+            <BlurFade delay={0.25} inView>
+              <h2 className="text-4xl font-semibold">
+                We handle just about everything!
+              </h2>
+            </BlurFade>
+            <BlurFade delay={0.25} inView>
+              <p className="text-lg text-muted-foreground">
+                We handle everything from design to deployment to get your
+                website shipped and ready to go!
+              </p>
+            </BlurFade>
           </div>
           <div className="z-30 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SERVICES_DATA.map((data, index) => (
-              <Services
-                key={index}
-                Icon={data.Icon}
-                title={data.title}
-                description={data.description}
-              />
+              <BlurFade key={index} delay={0.25 + index * 0.05} inView>
+                <Services
+                  Icon={data.Icon}
+                  title={data.title}
+                  description={data.description}
+                />
+              </BlurFade>
             ))}
           </div>
         </div>
       </section>
 
       <section id="contact" className="py-20">
-        <div className="relative mx-auto flex size-full max-w-screen-lg flex-col items-center justify-center overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl">
-          <div className="z-10 mb-6 space-y-5 text-center">
-            <p className="whitespace-pre-wrap text-5xl font-bold tracking-tighter text-black dark:text-white">
-              Let&apos;s build your website today!
-            </p>
-            <p className="mx-auto max-w-lg text-lg text-muted-foreground">
-              Contact us and we will get back within 24 hours. We mean it. You
-              saw the testimonials, right?
-            </p>
-            <ContactForm variant={"outline"} size={"lg"} />
+        <BlurFade delay={0.25} inView>
+          <div className="relative mx-auto flex size-full max-w-screen-lg flex-col items-center justify-center overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl">
+            <div className="z-10 mb-6 space-y-5 text-center">
+              <p className="whitespace-pre-wrap text-5xl font-bold tracking-tighter text-black dark:text-white">
+                Let&apos;s build your website today!
+              </p>
+              <p className="mx-auto max-w-lg text-lg text-muted-foreground">
+                Contact us and we will get back within 24 hours. We mean it. You
+                saw the testimonials, right?
+              </p>
+              <ContactForm variant={"outline"} size={"lg"} />
+            </div>
+            <GridPattern
+              width={32}
+              height={32}
+              x={-1}
+              y={-1}
+              className={cn(
+                "[mask-image:linear-gradient(to_bottom,transparent,white,transparent)]",
+              )}
+            />
           </div>
-          <GridPattern
-            width={32}
-            height={32}
-            x={-1}
-            y={-1}
-            className={cn(
-              "[mask-image:linear-gradient(to_bottom,transparent,white,transparent)]",
-            )}
-          />
-        </div>
+        </BlurFade>
       </section>
     </>
   );
@@ -148,7 +170,7 @@ const Work = ({ title, description, link, imageSrc }: WorkType) => {
     <div className="my-8 flex flex-col gap-4 py-2 lg:flex-row lg:py-4">
       <div className="flex flex-col gap-4">
         <h3 className="text-2xl font-bold">{title}</h3>
-        <div className="mt-4 max-w-xs text-sm leading-6 text-muted-foreground">
+        <div className="mt-4 max-w-full text-sm leading-6 text-muted-foreground lg:max-w-xs">
           <p>{description}</p>
         </div>
         <hr className="w-6" />
@@ -159,19 +181,19 @@ const Work = ({ title, description, link, imageSrc }: WorkType) => {
         </Button>
       </div>
       <div className="mt-10 flex h-fit flex-1 flex-col space-y-6 overflow-x-auto sm:flex-row sm:space-x-6 sm:space-y-0 lg:mt-0">
-        <div className="relative max-w-sm rounded-xl border border-gray-100">
+        <div className="relative max-w-full rounded-xl border border-border">
           <Image
-            height={100}
-            width={300}
+            height={1080}
+            width={1920}
             alt="image"
             src={imageSrc[0]}
             className="aspect-video h-full w-full rounded-xl object-cover object-center blur-0 transition duration-300"
           />
         </div>
-        <div className="relative max-w-sm rounded-xl border border-gray-100">
+        <div className="relative max-w-full rounded-xl border border-border">
           <Image
-            height={100}
-            width={300}
+            height={1080}
+            width={1920}
             alt="image"
             src={imageSrc[1]}
             className="aspect-video h-full w-full rounded-xl object-cover object-center blur-0 transition duration-300"
