@@ -1,12 +1,14 @@
-import "~/styles/globals.css";
+import "@/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
-import { ThemeProvider } from "~/provider/theme-provider";
+
+import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/provider/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "2xDevs",
-  description: "Developed by 2xDevelopers",
+  title: "2xdevs Starter Kit",
+  description: "",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
@@ -14,15 +16,24 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          "min-h-dvh bg-background font-sans antialiased",
+          GeistSans.variable,
+        )}
+      >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div vaul-drawer-wrapper="">
+            <div className="relative flex min-h-dvh flex-col bg-background">
+              {children}
+            </div>
+          </div>
         </ThemeProvider>
       </body>
     </html>
