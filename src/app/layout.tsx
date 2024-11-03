@@ -9,7 +9,7 @@ import { ThemeProvider } from "@/provider/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "2xDevs",
-  description: "",
+  description: "Created by 2xDevelopers",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
