@@ -30,7 +30,7 @@ export const FEATURES_DATA: FeatureType[] = [
     Icon: Users,
     title: "Built by experts",
     description:
-      "We are a team of Senior Software Engineers that have built and developed web apps at scale. You can trust us.",
+      "We’re a team of senior software engineers with experience building high-scale web apps. Trust 2xDevs to bring your project to life.",
   },
 ];
 
@@ -38,21 +38,21 @@ export const WORK_DATA: WorkType[] = [
   {
     title: "Project Store",
     description:
-      "Practice the most popular coding questions asked in a technical interview round. Used by 1000+ registered users preparing for technical interviews.",
+      "Project Store is an e-commerce platform by 2xdevs, featuring Razorpay integration for secure payments and a user-friendly design, ensuring a seamless shopping experience.",
     link: "https://projectstore.2xdevs.com",
     imageSrc: ["/projectStore-1.png", "/projectStore-2.png"],
   },
   {
     title: "RecapTube",
     description:
-      "Practice the most popular coding questions asked in a technical interview round. Used by 1000+ registered users preparing for technical interviews.",
+      "RecapTube is a YouTube video summarizer developed by 2xdevs that uses Google Gemini API to quickly generate concise summaries of videos, helping users save time while staying informed.",
     link: "https://recaptube.2xdevs.com",
     imageSrc: ["/recaptube-1.png", "/recaptube-2.png"],
   },
   {
     title: "Blog",
     description:
-      "Practice the most popular coding questions asked in a technical interview round. Used by 1000+ registered users preparing for technical interviews.",
+      "The blog at 2xdevs features insightful articles on development, technology trends, and project showcases, providing valuable knowledge and resources for developers and enthusiasts alike.",
     link: "https://blog.2xdevs.com",
     imageSrc: ["/blog-1.png", "/blog-2.png"],
   },
@@ -72,10 +72,16 @@ export const SERVICES_DATA: ServicesType[] = [
       "Your website will be so beautiful, you'll want to frame it and hang it on your wall (but please don't).",
   },
   {
+    Icon: Code,
+    title: "Full-Stack Development",
+    description:
+      "Take your website to the next level with our full-stack development services. We've got all the skills to make your vision a reality.",
+  },
+  {
     Icon: Rocket,
     title: "Deployments and Hosting",
     description:
-      "Get your website out there in the world, where it belongs, with our lightning-fast deployment services.",
+      "Get your website out there in the world, where it belongs, with our lightning-fast deployment services. Rely on our support to keep your site running effortlessly.",
   },
   {
     Icon: Code,
@@ -84,15 +90,9 @@ export const SERVICES_DATA: ServicesType[] = [
       "We keep your website running like a well-oiled machine. From optimizing performance to ensuring security, we've got you covered.",
   },
   {
-    Icon: Code,
-    title: "Full-Stack Development",
-    description:
-      "Take your website to the next level with our full-stack development services. We've got all the skills to make your vision a reality.",
-  },
-  {
     Icon: BookmarkCheck,
     title: "And everything else",
     description:
-      "Ecommerce, Landing pages, Back-end heavy, Dashboards. You name it, we've done it AND we'll do it for you.",
+      "And everything else. From e-commerce sites and landing pages to back-end applications and dashboards, you name it, we’ve done it—and we can do it for you!",
   },
 ];

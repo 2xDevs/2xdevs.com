@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/provider/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "2xdevs Starter Kit",
+  title: "2xDevs",
   description: "",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };

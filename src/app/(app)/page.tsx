@@ -3,6 +3,7 @@ import { Logo } from "@/components/logo";
 import BlurFade from "@/components/ui/blur-fade";
 import { Button } from "@/components/ui/button";
 import GridPattern from "@/components/ui/grid-pattern";
+import { MagicCard } from "@/components/ui/magic-card";
 import { cn } from "@/lib/utils";
 import { FEATURES_DATA, SERVICES_DATA, WORK_DATA } from "@/static/data";
 import {
@@ -10,13 +11,14 @@ import {
   type ServicesType,
   type WorkType,
 } from "@/types/types";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function HomePage() {
   return (
     <>
-      <section id="Hero" className="border-b py-12">
+      <section id="Hero" className="py-12">
         <div className="mx-auto max-w-screen-lg space-y-20 px-4">
           <div className="text-center">
             <BlurFade delay={0.25} inView>
@@ -32,10 +34,11 @@ export default function HomePage() {
               </BlurFade>
               <BlurFade delay={0.35} inView>
                 <p className="font-regular mx-auto max-w-3xl text-base tracking-wide text-muted-foreground">
-                  We build websites for your business that actually convert.
-                  Wonderfully designed, masterfully created websites and
-                  layouts, created by the founders of Google and Facebook. The
-                  ideal beginning stage for your next project.
+                  We build websites and web apps that truly convert. At 2xDevs,
+                  we deliver striking designs and powerful functionality—crafted
+                  by dedicated founders. The perfect starting point for your
+                  next project, whether it’s a fresh website, custom web app, or
+                  freelance support.
                 </p>
               </BlurFade>
             </div>
@@ -60,14 +63,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <BlurFade delay={0.45} inView>
+        <hr className="w-full" />
+      </BlurFade>
 
-      <section id="work" className="border-b py-12">
+      <section id="work" className="py-12">
         <div className="mx-auto max-w-6xl space-y-12 px-8">
           <div className="space-y-2 text-center">
-            <BlurFade delay={0.5} inView>
+            <BlurFade delay={0.45} inView>
               <h2 className="text-4xl font-bold text-primary">Recent Work</h2>
             </BlurFade>
-            <BlurFade delay={0.5} inView>
+            <BlurFade delay={0.45} inView>
               <p>
                 A look at some of the amazing websites that we&apos;ve built
                 recently.
@@ -88,6 +94,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <BlurFade delay={0.25} inView>
+        <hr className="w-full" />
+      </BlurFade>
 
       <section id="services" className="py-12">
         <div className="mx-auto max-w-6xl space-y-12 px-8">
@@ -122,12 +132,12 @@ export default function HomePage() {
         <BlurFade delay={0.25} inView>
           <div className="relative mx-auto flex size-full max-w-screen-lg flex-col items-center justify-center overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl">
             <div className="z-10 mb-6 space-y-5 text-center">
-              <p className="whitespace-pre-wrap text-5xl font-bold tracking-tighter text-black dark:text-white">
+              <p className="whitespace-pre-wrap text-4xl font-bold tracking-tighter text-black dark:text-white sm:text-5xl">
                 Let&apos;s build your website today!
               </p>
               <p className="mx-auto max-w-lg text-lg text-muted-foreground">
-                Contact us and we will get back within 24 hours. We mean it. You
-                saw the testimonials, right?
+                Contact us, and we'll respond within 24 hours. We mean it—your
+                project is our priority!
               </p>
               <ContactForm variant={"outline"} size={"lg"} />
             </div>
@@ -177,6 +187,12 @@ const Work = ({ title, description, link, imageSrc }: WorkType) => {
         <Button asChild className="w-fit">
           <Link target="_blank" href={link}>
             Live Preview
+            <ArrowUpRight
+              className="-me-1 ms-1 opacity-60 transition-transform group-hover:translate-x-0.5"
+              size={16}
+              strokeWidth={2}
+              aria-hidden="true"
+            />
           </Link>
         </Button>
       </div>
@@ -206,12 +222,17 @@ const Work = ({ title, description, link, imageSrc }: WorkType) => {
 
 const Services = ({ Icon, title, description }: ServicesType) => {
   return (
-    <div className="flex flex-col gap-10 rounded-lg border bg-background p-8">
-      <div>
-        <Icon />
-        <h3 className="mb-2 mt-6 font-medium">{title}</h3>
-        <p className="text-sm text-muted-foreground">{description}</p>
-      </div>
+    <div className="flex flex-col gap-10 rounded-lg border bg-background">
+      <MagicCard
+        className="flex flex-col gap-10 rounded-lg border !bg-background p-8"
+        gradientColor={"#1d4ed8"}
+      >
+        <div>
+          <Icon />
+          <h3 className="mb-2 mt-6 font-medium">{title}</h3>
+          <p className="text-sm text-muted-foreground">{description}</p>
+        </div>
+      </MagicCard>
     </div>
   );
 };
