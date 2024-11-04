@@ -1,11 +1,15 @@
 import { env } from "@/env";
-import { NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 
 const webhookUrl = env.DISCORD_WEBHOOK_URL;
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, message } = (await req.json()) as {
+      name: string;
+      email: string;
+      message: string;
+    };
     console.log(name, email, message);
     if (!webhookUrl) {
       return NextResponse.json(

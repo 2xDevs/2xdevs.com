@@ -27,8 +27,9 @@ const ContactForm = ({
     if (!open) setDialogOpen(false);
   };
 
-  const formAction = async (formData: FormData) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     try {
+      const formData = new FormData(e.currentTarget);
       const formValues = Object.fromEntries(formData);
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -46,7 +47,7 @@ const ContactForm = ({
       toast.success("Message Sent!", {
         description: "Thank you for contacting us. We'll get back to you soon.",
       });
-    } catch (error) {
+    } catch {
       toast.error("Oops, something went wrong!", {
         description:
           "We're sorry, it seems like something went wrong. Please try again later.",
@@ -77,7 +78,7 @@ const ContactForm = ({
               possible.
             </DialogDescription>
           </DialogHeader>
-          <form action={formAction} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-4 leading-none">
               <div className="space-y-2">
                 <Label htmlFor="name">Your Name</Label>

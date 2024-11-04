@@ -64,8 +64,8 @@ export const Logo = ({ className }: { className?: string }) => {
           animate="color1"
           variants={icon}
           transition={{
-            default: { duration: 1, ease: "easeInOut" },
-            fill: { duration: 1, ease: [1, 0, 0.8, 1] },
+            default: { duration: 2, ease: "easeInOut" },
+            fill: { duration: 2, ease: [1, 0, 0.8, 1] },
           }}
         />
         <motion.path
@@ -76,8 +76,8 @@ export const Logo = ({ className }: { className?: string }) => {
           animate="color1"
           variants={icon}
           transition={{
-            default: { duration: 1, ease: "easeInOut" },
-            fill: { duration: 1, ease: [1, 0, 0.8, 1] },
+            default: { duration: 2, ease: "easeInOut" },
+            fill: { duration: 2, ease: [1, 0, 0.8, 1] },
           }}
         />
         <motion.path
@@ -88,8 +88,8 @@ export const Logo = ({ className }: { className?: string }) => {
           animate="color1"
           variants={icon}
           transition={{
-            default: { duration: 1, ease: "easeInOut" },
-            fill: { duration: 1, ease: [1, 0, 0.8, 1] },
+            default: { duration: 2, ease: "easeInOut" },
+            fill: { duration: 2, ease: [1, 0, 0.8, 1] },
           }}
         />
         <motion.path
@@ -100,8 +100,8 @@ export const Logo = ({ className }: { className?: string }) => {
           animate="color2"
           variants={icon}
           transition={{
-            default: { duration: 1, ease: "easeInOut" },
-            fill: { duration: 1, ease: [1, 0, 0.8, 1] },
+            default: { duration: 2, ease: "easeInOut" },
+            fill: { duration: 2, ease: [1, 0, 0.8, 1] },
           }}
         />
         <motion.path
@@ -112,8 +112,8 @@ export const Logo = ({ className }: { className?: string }) => {
           animate="color3"
           variants={icon}
           transition={{
-            default: { duration: 1, ease: "easeInOut" },
-            fill: { duration: 1, ease: [1, 0, 0.8, 1] },
+            default: { duration: 2, ease: "easeInOut" },
+            fill: { duration: 2, ease: [1, 0, 0.8, 1] },
           }}
         />
         <motion.path
@@ -124,8 +124,8 @@ export const Logo = ({ className }: { className?: string }) => {
           animate="color4"
           variants={icon}
           transition={{
-            default: { duration: 1, ease: "easeInOut" },
-            fill: { duration: 1, ease: [1, 0, 0.8, 1] },
+            default: { duration: 2, ease: "easeInOut" },
+            fill: { duration: 2, ease: [1, 0, 0.8, 1] },
           }}
         />
         <motion.path
@@ -136,8 +136,8 @@ export const Logo = ({ className }: { className?: string }) => {
           animate="color5"
           variants={icon}
           transition={{
-            default: { duration: 1, ease: "easeInOut" },
-            fill: { duration: 1, ease: [1, 0, 0.8, 1] },
+            default: { duration: 2, ease: "easeInOut" },
+            fill: { duration: 2, ease: [1, 0, 0.8, 1] },
           }}
         />
         <motion.path
@@ -148,8 +148,8 @@ export const Logo = ({ className }: { className?: string }) => {
           animate="color6"
           variants={icon}
           transition={{
-            default: { duration: 1, ease: "easeInOut" },
-            fill: { duration: 1, ease: [1, 0, 0.8, 1] },
+            default: { duration: 2, ease: "easeInOut" },
+            fill: { duration: 2, ease: [1, 0, 0.8, 1] },
           }}
         />
       </motion.svg>

@@ -114,7 +114,7 @@ export default function HomePage() {
               </p>
             </BlurFade>
           </div>
-          <div className="z-30 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="z-30 grid items-center gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SERVICES_DATA.map((data, index) => (
               <BlurFade key={index} delay={0.25 + index * 0.05} inView>
                 <Services
@@ -135,9 +135,9 @@ export default function HomePage() {
               <p className="whitespace-pre-wrap text-4xl font-bold tracking-tighter text-black dark:text-white sm:text-5xl">
                 Let&apos;s build your website today!
               </p>
-              <p className="mx-auto max-w-lg text-lg text-muted-foreground">
-                Contact us, and we'll respond within 24 hours. We mean it—your
-                project is our priority!
+              <p className="mx-auto max-w-lg text-lg">
+                Contact us, and we&apos;ll respond within 24 hours. We mean
+                it—your project is our priority!
               </p>
               <ContactForm variant={"outline"} size={"lg"} />
             </div>
@@ -147,7 +147,7 @@ export default function HomePage() {
               x={-1}
               y={-1}
               className={cn(
-                "[mask-image:linear-gradient(to_bottom,transparent,white,transparent)]",
+                "z-0 [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]",
               )}
             />
           </div>
@@ -184,7 +184,7 @@ const Work = ({ title, description, link, imageSrc }: WorkType) => {
           <p>{description}</p>
         </div>
         <hr className="w-6" />
-        <Button asChild className="w-fit">
+        <Button asChild className="group w-fit">
           <Link target="_blank" href={link}>
             Live Preview
             <ArrowUpRight

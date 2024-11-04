@@ -1,9 +1,16 @@
 "use client";
 
 import { ContactForm } from "@/components/ContactForm";
+import { NavLogo } from "@/components/logo";
+import { ModeToggle } from "@/components/ModeToggle";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Sheet, SheetClose, SheetContent } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import {
   ArrowUpRight,
   Github,
@@ -20,16 +27,25 @@ export function MobileNav() {
 
   return (
     <>
-      <Button
-        variant="ghost"
-        className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 lg:hidden"
-        onClick={() => setOpen(true)}
-      >
-        <MenuIcon />
-        <span className="sr-only">Toggle Menu</span>
-      </Button>
+      <div className="flex lg:hidden">
+        <ModeToggle />
+        <Button variant="ghost" size={"icon"} onClick={() => setOpen(true)}>
+          <MenuIcon />
+          <span className="sr-only">Toggle Menu</span>
+        </Button>
+      </div>
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetContent side="left" className="flex flex-col pt-8">
+        <SheetContent side="left" className="flex flex-col pt-4">
+          <SheetTitle asChild>
+            <SheetClose asChild>
+              <Link href={"/"} className="flex w-fit items-center">
+                <NavLogo className="mr-2 h-6 w-6 md:h-10 md:w-10 lg:h-12 lg:w-12" />
+                <h1 className="text-base font-medium md:text-2xl md:font-bold">
+                  2xDevs
+                </h1>
+              </Link>
+            </SheetClose>
+          </SheetTitle>
           <ScrollArea className="my-4 h-full pb-10">
             <div className="flex flex-col items-start space-y-1">
               <SheetClose asChild>
