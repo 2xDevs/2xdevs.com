@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function TermsAndConditions() {
   return (
-    <section className="prose prose-headings:text-foreground prose-p:text-foreground prose-a:text-foreground prose-blockquote:text-foreground prose-strong:text-foreground prose-li:text-foreground mx-auto max-w-screen-lg p-5 text-foreground sm:p-10">
+    <section className="prose mx-auto max-w-screen-lg p-5 text-foreground prose-headings:text-foreground prose-p:text-foreground prose-a:text-foreground prose-blockquote:text-foreground prose-strong:text-foreground prose-li:text-foreground sm:p-10">
       <h1>Terms and Conditions</h1>
       <p>Last updated: November 04, 2024</p>
       <p>
