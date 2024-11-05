@@ -139,7 +139,7 @@ export default function HomePage() {
                 Contact us, and we&apos;ll respond within 24 hours. We mean
                 it—your project is our priority!
               </p>
-              <ContactForm variant={"outline"} size={"lg"} />
+              <ContactForm variant={"outline"} size={"lg"} rainbow={true} />
             </div>
             <GridPattern
               width={32}
@@ -197,7 +197,7 @@ const Work = ({ title, description, link, imageSrc }: WorkType) => {
         </Button>
       </div>
       <div className="mt-10 flex h-fit flex-1 flex-col space-y-6 overflow-x-auto sm:flex-row sm:space-x-6 sm:space-y-0 lg:mt-0">
-        <div className="relative max-w-full rounded-xl border border-border">
+        <div className="relative max-w-full flex-1 rounded-xl border border-border">
           <Image
             height={1080}
             width={1920}
@@ -206,7 +206,7 @@ const Work = ({ title, description, link, imageSrc }: WorkType) => {
             className="aspect-video h-full w-full rounded-xl object-cover object-center blur-0 transition duration-300"
           />
         </div>
-        <div className="relative max-w-full rounded-xl border border-border">
+        <div className="relative max-w-full flex-1 rounded-xl border border-border">
           <Image
             height={1080}
             width={1920}

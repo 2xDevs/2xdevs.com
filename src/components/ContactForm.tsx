@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 import { Textarea } from "@/components/ui/textarea";
 import { type VariantProps } from "class-variance-authority";
 import { useState } from "react";
@@ -20,7 +21,11 @@ const ContactForm = ({
   variant = "default",
   size = "default",
   className,
-}: VariantProps<typeof buttonVariants> & { className?: string }) => {
+  rainbow = false,
+}: VariantProps<typeof buttonVariants> & {
+  className?: string;
+  rainbow?: boolean;
+}) => {
   const [dialogOpen, setDialogOpen] = useState(false);
 
   const handleClose = (open: boolean) => {
@@ -59,14 +64,23 @@ const ContactForm = ({
 
   return (
     <>
-      <Button
-        onClick={() => setDialogOpen(true)}
-        className={className}
-        size={size}
-        variant={variant}
-      >
-        Contact Us
-      </Button>
+      {rainbow ? (
+        <RainbowButton
+          onClick={() => setDialogOpen(true)}
+          className={className}
+        >
+          Contact Us
+        </RainbowButton>
+      ) : (
+        <Button
+          onClick={() => setDialogOpen(true)}
+          className={className}
+          size={size}
+          variant={variant}
+        >
+          Contact Us
+        </Button>
+      )}
       <Dialog open={dialogOpen} onOpenChange={handleClose}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
