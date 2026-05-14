@@ -1,3 +1,5 @@
+"use client";
+
 import { ContactForm } from "@/components/ContactForm";
 import { Logo } from "@/components/logo";
 import BlurFade from "@/components/ui/blur-fade";
@@ -14,8 +16,13 @@ import {
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function HomePage() {
+  const [requiredWorkData, setRequiredWorkData] = useState(
+    WORK_DATA.slice(0, 3),
+  );
+
   return (
     <>
       <section id="Hero" className="py-12">
@@ -68,7 +75,7 @@ export default function HomePage() {
       </BlurFade>
 
       <section id="work" className="py-12">
-        <div className="mx-auto max-w-6xl space-y-12 px-8">
+        <div className="mx-auto flex max-w-6xl flex-col space-y-12 px-8">
           <div className="space-y-2 text-center">
             <BlurFade delay={0.45} inView>
               <h2 className="text-4xl font-bold text-primary">Recent Work</h2>
@@ -81,8 +88,8 @@ export default function HomePage() {
             </BlurFade>
           </div>
           <div>
-            {WORK_DATA.map((data, index) => (
-              <BlurFade key={index} delay={0.25 + index * 0.05} inView>
+            {requiredWorkData.map((data, i) => (
+              <BlurFade key={data.id} delay={0.25 + i * 0.05} inView>
                 <Work
                   title={data.title}
                   description={data.description}
@@ -92,6 +99,14 @@ export default function HomePage() {
               </BlurFade>
             ))}
           </div>
+          {requiredWorkData.length === 3 && (
+            <Button
+              onClick={() => setRequiredWorkData(WORK_DATA)}
+              className="mx-auto"
+            >
+              View all projects
+            </Button>
+          )}
         </div>
       </section>
 
@@ -175,7 +190,7 @@ const Features = ({ Icon, title, description }: FeatureType) => {
   );
 };
 
-const Work = ({ title, description, link, imageSrc }: WorkType) => {
+const Work = ({ title, description, link, imageSrc }: Omit<WorkType, "id">) => {
   return (
     <div className="my-8 flex flex-col gap-4 py-2 lg:flex-row lg:py-4">
       <div className="flex flex-col gap-4">

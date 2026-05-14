@@ -36,25 +36,44 @@ export const FEATURES_DATA: FeatureType[] = [
 
 export const WORK_DATA: WorkType[] = [
   {
+    id: 1,
+    title: "QuickMark",
+    description:
+      "Practice the most popular coding questions asked in a technical interview round. Used by 1000+ registered users preparing for technical interviews.",
+    link: "https://quickmark.2xdevs.com",
+    imageSrc: ["/quickmark-1.png", "/quickmark-2.png"],
+  },
+  {
+    id: 2,
+    title: "Talzen",
+    description:
+      "Practice the most popular coding questions asked in a technical interview round. Used by 1000+ registered users preparing for technical interviews.",
+    link: "https://talzen.in",
+    imageSrc: ["/talzen-1.png", "/talzen-2.png"],
+  },
+  {
+    id: 3,
+    title: "Blog",
+    description:
+      "Practice the most popular coding questions asked in a technical interview round. Used by 1000+ registered users preparing for technical interviews.",
+    link: "https://blog.2xdevs.com",
+    imageSrc: ["/blog-1.png", "/blog-2.png"],
+  },
+  {
+    id: 4,
     title: "Project Store",
     description:
-      "Project Store is an e-commerce platform by 2xdevs, featuring Razorpay integration for secure payments and a user-friendly design, ensuring a seamless shopping experience.",
+      "Practice the most popular coding questions asked in a technical interview round. Used by 1000+ registered users preparing for technical interviews.",
     link: "https://projectstore.2xdevs.com",
     imageSrc: ["/projectStore-1.png", "/projectStore-2.png"],
   },
   {
+    id: 5,
     title: "RecapTube",
     description:
-      "RecapTube is a YouTube video summarizer developed by 2xdevs that uses Google Gemini API to quickly generate concise summaries of videos, helping users save time while staying informed.",
+      "Practice the most popular coding questions asked in a technical interview round. Used by 1000+ registered users preparing for technical interviews.",
     link: "https://recaptube.2xdevs.com",
     imageSrc: ["/recaptube-1.png", "/recaptube-2.png"],
-  },
-  {
-    title: "Blog",
-    description:
-      "The blog at 2xdevs features insightful articles on development, technology trends, and project showcases, providing valuable knowledge and resources for developers and enthusiasts alike.",
-    link: "https://blog.2xdevs.com",
-    imageSrc: ["/blog-1.png", "/blog-2.png"],
   },
 ];
 
