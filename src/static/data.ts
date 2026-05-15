@@ -39,41 +39,55 @@ export const WORK_DATA: WorkType[] = [
     id: 1,
     title: "QuickMark",
     description:
-      "Practice the most popular coding questions asked in a technical interview round. Used by 1000+ registered users preparing for technical interviews.",
+      "QuickMark is a smart workforce management system that simplifies attendance tracking, employee management, and daily business operations with an efficient and easy-to-use digital solution.",
     link: "https://quickmark.2xdevs.com",
     imageSrc: ["/quickmark-1.png", "/quickmark-2.png"],
+    latest: true,
   },
   {
     id: 2,
-    title: "Talzen",
+    title: "Hanuman Auto Works",
     description:
-      "Practice the most popular coding questions asked in a technical interview round. Used by 1000+ registered users preparing for technical interviews.",
-    link: "https://talzen.in",
-    imageSrc: ["/talzen-1.png", "/talzen-2.png"],
+      "Hanuman Auto Works is a leading automotive service provider offering comprehensive maintenance and repair services for all types of vehicles.",
+    link: "https://hanumanautoworks.in",
+    imageSrc: ["/hanumanautoworks-1.png", "/hanumanautoworks-2.png"],
+    latest: true,
   },
   {
     id: 3,
-    title: "Blog",
+    title: "Talzen",
     description:
-      "Practice the most popular coding questions asked in a technical interview round. Used by 1000+ registered users preparing for technical interviews.",
-    link: "https://blog.2xdevs.com",
-    imageSrc: ["/blog-1.png", "/blog-2.png"],
+      "TALZEN is a training and placement institute focused on helping students build tech skills and start successful careers through hands-on learning, mentorship, and job assistance.",
+    link: "https://talzen.in",
+    imageSrc: ["/talzen-1.png", "/talzen-2.png"],
+    latest: true,
   },
   {
     id: 4,
-    title: "Project Store",
+    title: "Blog",
     description:
-      "Practice the most popular coding questions asked in a technical interview round. Used by 1000+ registered users preparing for technical interviews.",
-    link: "https://projectstore.2xdevs.com",
-    imageSrc: ["/projectStore-1.png", "/projectStore-2.png"],
+      "The blog at 2xdevs features insightful articles on development, technology trends, and project showcases, providing valuable knowledge and resources for developers and enthusiasts alike.",
+    link: "https://blog.2xdevs.com",
+    imageSrc: ["/blog-1.png", "/blog-2.png"],
+    latest: false,
   },
   {
     id: 5,
+    title: "Project Store",
+    description:
+      "Project Store is an e-commerce platform by 2xdevs, featuring Razorpay integration for secure payments and a user-friendly design, ensuring a seamless shopping experience.",
+    link: "https://projectstore.2xdevs.com",
+    imageSrc: ["/projectStore-1.png", "/projectStore-2.png"],
+    latest: false,
+  },
+  {
+    id: 6,
     title: "RecapTube",
     description:
-      "Practice the most popular coding questions asked in a technical interview round. Used by 1000+ registered users preparing for technical interviews.",
+      "RecapTube is a YouTube video summarizer developed by 2xdevs that uses Google Gemini API to quickly generate concise summaries of videos, helping users save time while staying informed.",
     link: "https://recaptube.2xdevs.com",
     imageSrc: ["/recaptube-1.png", "/recaptube-2.png"],
+    latest: false,
   },
 ];
 

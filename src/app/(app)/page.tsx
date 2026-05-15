@@ -20,7 +20,7 @@ import { useState } from "react";
 
 export default function HomePage() {
   const [requiredWorkData, setRequiredWorkData] = useState(
-    WORK_DATA.slice(0, 3),
+    WORK_DATA.slice(0, 4),
   );
 
   return (
@@ -95,11 +95,12 @@ export default function HomePage() {
                   description={data.description}
                   link={data.link}
                   imageSrc={data.imageSrc}
+                  latest={data.latest}
                 />
               </BlurFade>
             ))}
           </div>
-          {requiredWorkData.length === 3 && (
+          {requiredWorkData.length === 4 && (
             <Button
               onClick={() => setRequiredWorkData(WORK_DATA)}
               className="mx-auto"
@@ -190,11 +191,26 @@ const Features = ({ Icon, title, description }: FeatureType) => {
   );
 };
 
-const Work = ({ title, description, link, imageSrc }: Omit<WorkType, "id">) => {
+const Work = ({
+  title,
+  description,
+  link,
+  imageSrc,
+  latest,
+}: Omit<WorkType, "id">) => {
   return (
     <div className="my-8 flex flex-col gap-4 py-2 lg:flex-row lg:py-4">
       <div className="flex flex-col gap-4">
-        <h3 className="text-2xl font-bold">{title}</h3>
+        <h3 className="flex items-center gap-2 text-2xl font-bold">
+          {title}
+          {latest && (
+            <span
+              title="latest"
+              className="size-2 animate-pulse rounded-full bg-green-600"
+            ></span>
+          )}
+        </h3>
+
         <div className="mt-4 max-w-full text-sm leading-6 text-muted-foreground lg:max-w-xs">
           <p>{description}</p>
         </div>

@@ -12,6 +12,7 @@ export type WorkType = {
   description: string;
   link: string;
   imageSrc: [string, string];
+  latest: boolean;
 };
 
 export type ServicesType = {
