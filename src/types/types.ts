@@ -7,6 +7,7 @@ export type FeatureType = {
 };
 
 export type WorkType = {
+  id: number;
   title: string;
   description: string;
   link: string;
